@@ -6,6 +6,8 @@ import Spinner from '../components/Spinner'
 import { getAllBikes } from '../redux/actions/bikeActions'
 import moment  from 'moment'
 import { bookBike } from '../redux/actions/bookingActions'
+import StripeCheckout from 'react-stripe-checkout';
+
 
 const { RangePicker } = DatePicker
 
@@ -45,27 +47,30 @@ function BookingBike({match}) {
 
 
     function selectTimeSlots(values) {
-        setFrom(moment(values[0]).format("MMM DD yyyy HH:mm"));
-        setTo(moment(values[1]).format("MMM DD yyyy HH:mm"));
+        setFrom(moment(values[0]).format("DD MMM yyyy HH:mm"));
+        setTo(moment(values[1]).format("DD MMM yyyy HH:mm"));
     
         setTotalDays(values[1].diff(values[0], "days"));
       }
 
-    function bookNow() {
-      const reqObj = {
-        user: JSON.parse(localStorage.getItem("user"))._id,
-        bike: bike._id, 
-        totalDays,
-        totalAmount,
-        premiumRequired: premium,
-        bookSlots: {
-          from,
-          to,
-        },
-      };
-  
-      dispatch(bookBike(reqObj));
-  } 
+    
+    function onToken(token){
+    const reqObj = {
+      token,
+      user: JSON.parse(localStorage.getItem("user"))._id,
+      bike: bike._id, 
+      totalDays,
+      totalAmount,
+      premiumRequired: premium,
+      bookSlots: {
+        from,
+        to,
+      },
+    };
+
+    dispatch(bookBike(reqObj));
+
+}
 
     return (
         <Defaultlayout>
@@ -76,7 +81,7 @@ function BookingBike({match}) {
                 style={{ minHeight: "90vh" 
             }} >
                 <Col lg={10} sm={24} xs={24}>
-                    <img src={bike.image} className='bikeImg2 bs1' />
+                    <img src={bike.image} className='bikeImg2 bs1' alt="bike for rent" />
                 </Col>
                 <Col lg={10} sm={24} xs={24}>
                     <Divider type='horizontal'>
@@ -95,24 +100,33 @@ function BookingBike({match}) {
                             format="MMM DD yyyy HH:mm"
                             onChange={selectTimeSlots}
                             />
-                    <div>
-                    <p className="tcs">We hire all our bikes in two categories: <b>Basic</b> or <b>Premium</b>. If you keep basic we just charge €10.</p>
-                    <Checkbox
-                           onChange={(e)=> {
-                           if(e.target.checked)
-                           {
-                               setPremium(true);
-                           }
-                           else 
-                           {
-                               setPremium(false)
-                           }
-                       }} >I rather have a Premium Bike</Checkbox>       
-                                   
-                       <h3 className='totalAmount'>Total Amount: € {totalAmount}</h3>
-
-                       <button className='btn1' onClick={bookNow}>Book Now</button>
-                    </div>
+                    {from && to &&(
+                        <div>
+                        <p className="tcs">We hire all our bikes in two categories: <b>Basic</b> or <b>Premium</b>. If you keep basic we just charge €10.</p>
+                        <Checkbox
+                               onChange={(e)=> {
+                               if(e.target.checked)
+                               {
+                                   setPremium(true);
+                               }
+                               else 
+                               {
+                                   setPremium(false)
+                               }
+                           }} >I rather have a Premium Bike</Checkbox>       
+                                       
+                           <h3 className='totalAmount'>Total Amount: € {totalAmount}</h3>
+                           <StripeCheckout
+                                shippingAddress
+                                token={onToken}
+                                amount= {totalAmount * 100}
+                                currency="EUR"
+                                stripeKey="pk_test_51GuFQwEGbOOiC4bEg3Yo9uRT9IaqGxakAo6FPk1p0bJgcc8QtnMRuJN8evYqHRvMH3uv861S8B8vcfgJRr7mFVwe00OrtVxqpN"
+                            >
+                           <button className='btn1'>Book Now</button>
+                            </StripeCheckout>
+                        </div>
+                    )}
                 </Col>
             </Row>
         </Defaultlayout>

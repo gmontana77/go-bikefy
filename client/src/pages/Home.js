@@ -17,14 +17,13 @@ function Home() {
 
     return (
         <Defaultlayout>
-            
             {loading == true && (<Spinner />)}
 
             <Row justify='center' gutter={16} className='mt-5'>
                 {bikes.map(bike=>{
                     return <Col lg={5} sm={24} xs={24}>
                         <div className="bike p-2 bs1 mt-3">
-                            <img src={bike.image} className="bikeImg"/>
+                            <img src={bike.image} className="bikeImg" alt="bike for rent"/>
                         </div>
                         <div className="bike-content d-flex align-items-center justify-content-between">
 

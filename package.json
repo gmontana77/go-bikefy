@@ -13,6 +13,8 @@
     "mongoose": "^6.0.13",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.0"
+    "redux-thunk": "^2.4.0",
+    "stripe": "^8.191.0",
+    "uuid": "^8.3.2"
   }
 }
