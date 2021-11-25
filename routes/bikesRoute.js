@@ -2,48 +2,50 @@ const express = require("express");
 const router = express.Router();
 const Bike = require("../models/bikeModel");
 
-
-router.get("/getallbikes", async(req, res) => {
-
-    try {
-        const bikes = await Bike.find()
-        res.send(bikes)
-    } catch (error) {
-
-        return res.status(400).json(error);
-    }
-
+router.get("/getallbikes", async (req, res) => {
+  try {
+    const bikes = await Bike.find();
+    res.send(bikes);
+  } catch (error) {
+    return res.status(400).json(error);
+  }
 });
 
-router.post("/addbike", async(req, res) => {
+router.post("/addbike", async (req, res) => {
+  try {
+    const newbike = new Bike(req.body);
+    await newbike.save();
+    res.send("Bike added successfully");
+  } catch (error) {
+    return res.status(400).json(error);
+  }
+});
 
-    try {
-        const newbike = new Bike(req.body)
-        await newbike.save()
-        res.send('Bike added successfully')
-    } catch (error) {
-        return res.status(400).json(error);
-        
-    }
-})
+router.post("/editbike", async (req, res) => {
+  try {
+    const bike = await Bike.findOne({ _id: req.body._id });
+    bike.name = req.body.name;
+    bike.image = req.body.image;
+    bike.type = req.body.type;
+    bike.category = req.body.category;
+    bike.rentPerDay = req.body.rentPerDay;
 
-router.post("/editbike", async(req, res) => {
+    await bike.save();
 
-    try {
-        const bike = await Bike.findOne({_id : req.body._id} )
-        bike.name = req.body.name
-        bike.image = req.body.image
-        bike.type = req.body.type
-        bike.category = req.body.category
-        bike.rentPerDay = req.body.rentPerDay
+    res.send("Bike details updated successfully");
+  } catch (error) {
+    return res.status(400).json(error);
+  }
+});
 
-        await bike.save()
+router.post("/deletebike", async (req, res) => {
+  try {
+    await Bike.findOneAndDelete({ _id: req.body.bikeid });
 
-        res.send('Bike details updated successfully')
-    } catch (error) {
-        return res.status(400).json(error);
-        
-    }
-})
+    res.send("Bike deleted successfully");
+  } catch (error) {
+    return res.status(400).json(error);
+  }
+});
 
 module.exports = router;
