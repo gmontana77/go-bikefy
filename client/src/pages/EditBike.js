@@ -90,7 +90,7 @@ function EditBike({ match }) {
           >
             {loading && <Spinner />}
             <Row justify="center mt-5">
-              <Col lg={12} sm={24} xs={24} className="p-2">
+              <Col lg={16} sm={16} xs={14} className="p-2">
                 {totalbikes.length > 0 && (
                   <Form
                     initialValues={bike}
