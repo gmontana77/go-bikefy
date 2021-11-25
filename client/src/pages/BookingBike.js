@@ -13,7 +13,7 @@ const { RangePicker } = DatePicker
 
 function BookingBike({match}) {
     const { bikes } = useSelector(state=>state.bikesReducer)
-    const { loading } = useSelector(state=>state.alertsReducers)
+    const { loading } = useSelector(state=>state.alertsReducer)
     const [bike, setbike]=useState({})
     const dispatch = useDispatch()
     const [from, setFrom] = useState();

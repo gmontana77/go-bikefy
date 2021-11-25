@@ -76,7 +76,7 @@ p.price {
   color: white !important;
 }
 .btn1:focus {
-  border: 1px solid orangered !important;
+  border: none !important;
   outline: none !important;
 }
 .content {
@@ -191,4 +191,9 @@ opacity: 0.5;
 
 .totalAmount {
   line-height: 80px;
+}
+
+svg {
+  height: 16px !important;
+  width: 16px !important;
 }

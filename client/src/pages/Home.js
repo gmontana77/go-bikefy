@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Defaultlayout from '../components/DefaultLayout'
 import { getAllBikes } from '../redux/actions/bikeActions'
-import { Button, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
 
 function Home() {
     const { bikes } = useSelector(state=>state.bikesReducer)
-    const { loading } = useSelector(state=>state.alertsReducers)
+    const { loading } = useSelector(state=>state.alertsReducer)
     const dispatch = useDispatch()
 
     useEffect(() => {

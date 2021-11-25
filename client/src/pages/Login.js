@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner'
 
 function Login() {
     const dispatch = useDispatch()
-    const { loading } = useSelector(state=>state.alertsReducers)
+    const { loading } = useSelector(state=>state.alertsReducer)
     function onFinish(values) {
         dispatch(userLogin(values))
         console.log(values)

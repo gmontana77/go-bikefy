@@ -2,7 +2,7 @@ const initialData = {
     loading : false
 };
 
-export const alertsReducers=(state=initialData, action)=> {
+export const alertsReducer=(state=initialData, action)=> {
 
     switch(action.type)
     {

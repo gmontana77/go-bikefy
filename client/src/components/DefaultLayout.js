@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu, Dropdown, Button, Row, Col} from 'antd';
 import Spinner from '../components/Spinner'
+import { Link } from 'react-router-dom'
 
 
 function Defaultlayout(props) {
@@ -10,18 +11,18 @@ function Defaultlayout(props) {
     const menu = (
         <Menu>
          <Menu.Item>
-            <a href="https://ant.design/components/menu/#header">
+            <a href="/">
               Home
             </a>
           </Menu.Item>
           <Menu.Item>
-            <a href="https://ant.design/components/menu/#header">
+            <a href="/userbookings">
               Bookings
             </a>
           </Menu.Item>
           <Menu.Item>
-            <a href="https://ant.design/components/menu/#header">
-              Profile
+            <a href="/admin">
+              Admin
             </a>
           </Menu.Item>
           <Menu.Item onClick={()=>{
@@ -38,7 +39,15 @@ function Defaultlayout(props) {
                 <Row gutter={16} justify='center'>
                     <Col lg={20} sm={24} xs={24}>
                         <div className='d-flex justify-content-between'>
-                            <h1 className="logoText">Go-Bikefy <span>Bikes & Stuff</span></h1>                         
+                            
+                            
+                            <h1 className="logoText">
+                              <Link to='/'style={{color:'orangered'}}>
+                              Go-Bikefy <span>Bikes & Stuff</span>
+                              </Link>
+                              </h1>   
+
+
                             <Dropdown overlay={menu} placement="bottomCenter">
                                 <Button>{user.username}</Button>
                             </Dropdown>

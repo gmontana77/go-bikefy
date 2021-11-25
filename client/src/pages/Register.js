@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner'
 
 function Register() {
     const dispatch = useDispatch()
-    const { loading } = useSelector(state=>state.alertsReducers)
+    const { loading } = useSelector(state=>state.alertsReducer)
     function onFinish(values) {
         dispatch(userRegister(values))
         console.log(values)
@@ -19,7 +19,7 @@ function Register() {
                 {loading && (<Spinner />)}
                 <Row gutter={16} className='d-flex align-item-center'>
                 <Col lg={16} style={{position: 'relative'}}>
-                    <img src='https://i.ibb.co/16HKc6n/bg.png' className='w-100' /> 
+                    <img src='https://i.ibb.co/16HKc6n/bg.png' className='w-100' alt='bg' /> 
                     
                     <h1 className="loginLogo">Go-Bikefy</h1>
                     </Col> 
