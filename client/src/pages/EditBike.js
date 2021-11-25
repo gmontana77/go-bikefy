@@ -31,15 +31,13 @@ function EditBike({match}) {
    const dispatch = useDispatch()
     const {loading} = useSelector(state=>state.alertsReducer)
 
-    function onFinish(values){
-
-         values.id = bike._id;
+    function onFinish(values) {
+         values._id = bike._id;
 
          dispatch(editBike(values));
          console.log(values);
     }
     
-
           return (
             <Layout>
             <Sider
@@ -110,7 +108,7 @@ function EditBike({match}) {
                            </Form.Item>
 
                            <div className='text-right'>
-                           <button className='btn1'>EDIT BIKE</button>
+                           <button className='btn1'>UPDATE BIKE</button>
                            </div>
 
                        </Form>
