@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: azure;
@@ -9,8 +9,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 .spinner {
   position: absolute;
@@ -20,13 +20,14 @@ code {
 }
 
 .bs1 {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 h1 {
   font-size: 30px;
   font-weight: bold;
-  color:orangered;
+  color: orangered;
 }
 
 p {
@@ -40,7 +41,7 @@ p.name {
 }
 
 p.type {
-font-size: x-small;
+  font-size: x-small;
 }
 p.category {
   font-size: x-small;
@@ -59,7 +60,6 @@ p.price {
   border: 1px solid orangered !important;
   min-width: 100px;
   min-height: 35px;
-  
 }
 
 .btn1 {
@@ -71,9 +71,7 @@ p.price {
   min-height: 35px;
 }
 .btn1:hover {
-  box-shadow: none !important;
-  background-color: orangered !important;
-  color: white !important;
+  background-color: aliceblue !important;
 }
 .btn1:focus {
   border: none !important;
@@ -90,17 +88,17 @@ p.price {
 }
 
 .login {
-  background-color:black;
+  background-color: black;
   min-height: 100vh;
   padding-top: 30px;
 }
 
 .login label {
-  color:white !important;
+  color: white !important;
   opacity: 0.6;
 }
 .login h1 {
-  color:white !important;
+  color: white !important;
   opacity: 0.6;
 }
 
@@ -117,27 +115,26 @@ p.price {
 }
 
 .loginLogo {
-position: absolute;
-left:40%;
-right: 0;
-top: 50%;
-bottom: 50%;
-transform: translateY(50%, 50%);
-
+  position: absolute;
+  left: 40%;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(50%, 50%);
 }
 
 .login a {
-color:white !important;
-opacity: 0.5;
+  color: white !important;
+  opacity: 0.5;
 }
 
-.logoText span{
-  color:#333333;
+.logoText span {
+  color: #333333;
   font-size: xx-small;
-  position:relative;
+  position: relative;
   letter-spacing: 2px;
-  left:-125px;
-  top:15px;
+  left: -125px;
+  top: 15px;
 }
 
 .bikeImg2 {
@@ -148,7 +145,7 @@ opacity: 0.5;
 .dtPrice {
   font-size: 22px;
   line-height: 22px;
-  color:orangered;
+  color: orangered;
   margin-bottom: 30px !important;
 }
 
@@ -157,14 +154,14 @@ opacity: 0.5;
   line-height: 28px;
   padding-right: 15px;
   padding-left: 15px;
-  color:black;
+  color: black;
 }
 .dtInfo2 {
   font-size: 13px;
   line-height: 13px;
   padding-right: 5px;
   padding-left: 5px;
-  color:black;
+  color: black;
 }
 .dtName {
   font-size: 26px;
@@ -172,18 +169,17 @@ opacity: 0.5;
 }
 
 .dtFooter {
-  color:lightgray;
+  color: lightgray;
   font-weight: 600;
   font-size: 16px;
 }
 
 .dtFooter2 {
-  color:black  !important;
+  color: black !important;
   font-weight: 300;
 }
-.tcs
-{
-  color:green;
+.tcs {
+  color: green;
   font-size: x-small;
   line-height: 40px;
   text-align: center;
@@ -196,4 +192,7 @@ opacity: 0.5;
 svg {
   height: 16px !important;
   width: 16px !important;
+}
+a {
+  color: orangered !important;
 }

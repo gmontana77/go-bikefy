@@ -83,7 +83,7 @@ function AdminArea() {
             <Row justify="center" gutter={6} className="mt-4  mb-4">
               {bikes.map((bike) => {
                 return (
-                  <Col lg={5} sm={24} xs={24}>
+                  <Col lg={5} sm={16} xs={16}>
                     <div className="bike p-1 bs1 mt-2">
                       <img
                         src={bike.image}
