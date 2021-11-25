@@ -21,7 +21,7 @@ function Defaultlayout(props) {
           window.location.href = "/login";
         }}
       >
-        <li>Logout</li>
+        <li style={{ color: "orangered" }}>Logout</li>
       </Menu.Item>
     </Menu>
   );
