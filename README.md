@@ -2,8 +2,8 @@
 
 
 ## Getting Started
-Please referred to the .env file to run locally
-Also visit the db.js and server.js in root folder
+Please referred to the [.env] file to run locally
+Also visit the [db.js] and [server.js] in root folder
 
 ### Executing program
 
@@ -12,13 +12,13 @@ Also visit the db.js and server.js in root folder
 ```
 http://localhost:5000/api/bikes/getallbikes
 ```
-* cd to client folder and run yarn start
+* cd in to the client folder and run yarn start
 
 
-# Technologies Used
+### Technologies Used
 The application as being built with React, Redux, Redux-Thunk, Node Express, Mongo DB & Ant Design.
 
-# Features
+### Features
 * Stripe Payment Gateway Integration
 * State Management Redux (actions, reducers, store)
 * User Dashboard, Admin dashboard, Manage Users, Bicycles, Bookings from the Admin panel
