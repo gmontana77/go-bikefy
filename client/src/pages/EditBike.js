@@ -67,8 +67,7 @@ function EditBike({ match }) {
             </Menu.Item>
           </SubMenu>
 
-          <SubMenu key="sub3" icon={<AppstoreOutlined />} title="Customers">
-            <Menu.Item key="7">Points bonus</Menu.Item>
+          <SubMenu key="sub3" icon={<AppstoreOutlined />} title="Front Store">
             <Menu.Item key="5">Shop</Menu.Item>
 
             <Menu.Item

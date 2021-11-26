@@ -92,17 +92,15 @@ function BookingBike({ match }) {
                 We hire all our bikes in two categories: <b>Basic</b> or{" "}
                 <b>Premium</b>. If you keep basic we just charge €10.
               </p>
+
               <Checkbox
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    setPremium(true);
-                  } else {
-                    setPremium(false);
-                  }
-                }}
-              >
-                I rather have a Premium Bike
-              </Checkbox>
+                value={premium}
+                onChange={() =>
+                  setPremium((premium) => !premium)
+                }
+              />
+              I rather have a Premium Bike
+              <p>{premium ? "2 points" : "1 point"}</p>
 
               <h3 className="totalAmount">Total Amount: € {totalAmount}</h3>
               <StripeCheckout
