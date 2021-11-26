@@ -2,8 +2,8 @@
 
 
 ## Getting Started
-Please referred to the [.env] file to run locally
-Also visit the [db.js] and [server.js] in root folder
+Please referred to the .env file to run locally
+Also visit the db.js and server.js in root folder
 
 ### Executing program
 
