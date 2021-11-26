@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -14,17 +14,25 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/" exact component={Home} />
+        <ProtectedRoute path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
-        <Route path="/booking/:bikeid" exact component={BookingBike} />
-        <Route path="/userbookings" exact component={UserBookings} />
-        <Route path="/admin/addbike" exact component={AddBike} />
-        <Route path="/editbike/:bikeid" exact component={EditBike} />
-        <Route path="/admin" exact component={AdminArea} />
+        <ProtectedRoute path="/booking/:bikeid" exact component={BookingBike} />
+        <ProtectedRoute path="/userbookings" exact component={UserBookings} />
+        <ProtectedRoute path="/admin/addbike" exact component={AddBike} />
+        <ProtectedRoute path="/editbike/:bikeid" exact component={EditBike} />
+        <ProtectedRoute path="/admin" exact component={AdminArea} />
       </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+export function ProtectedRoute(props) {
+  if (localStorage.getItem("user")) {
+    return <Route {...props} />;
+  } else {
+    return <Redirect to="/login" />;
+  }
+}
