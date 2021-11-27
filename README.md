@@ -1,4 +1,4 @@
-# Go-bikefy ###Bikes & Stuff
+# Go-bikefy `Bikes & Stuff`
 ## Getting Started
 ### [Demo here!](https://go-bikefy2.herokuapp.com/login)
 
