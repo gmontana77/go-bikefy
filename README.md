@@ -1,6 +1,6 @@
 # Go-bikefy 
 >Bikes & Stuff
-
+<br />
 
 ## Getting Started
 ### [Demo here!](https://go-bikefy2.herokuapp.com/login)
@@ -9,7 +9,7 @@ Clone the repo
    ```sh
    git clone https://github.com/gmontana77/go-bikefy.git
    ```
-
+<br />
 
 ### Execution requirements 
 
@@ -20,21 +20,22 @@ Please referred to the .env file to run locally, also visit the `db.js` and `ser
 * Localhost should be running on port 5000 `http://localhost:5000/api/bikes/getallbikes`
 * cd in to the `client` folder and run yarn start
 
-
+<br />
 ### Technologies Used
 The application as being built with `React, Redux, Redux-Thunk, Node Express, Mongo DB & Ant Design`.
-
+<br />
 ### Features
 * Stripe Payment Gateway Integration
 * State Management Redux (actions, reducers, store)
 * User Dashboard, Admin dashboard, Manage Users, Bicycles, Bookings from the Admin panel
 * Single Page Applications & Responsive Design
-
+<br />
 ### User Actions
 * User should be able to register/login
 * See bikes available, book & pay
 * See bookings
 * As admin user can see admin area, see catalogue, edit/update bike, delete & see catalogue.
-
+<br />
 ### UML Diagram 
 <img src="https://i.ibb.co/4mnkS4c/screenshot.png" width="350" title="Click here">
+<br />
