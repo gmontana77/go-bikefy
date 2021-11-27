@@ -2,7 +2,8 @@
  - [Demo here!](https://go-bikefy2.herokuapp.com/login)
 
 ### Executing requirements
-Please referred to the .env file to run locally, also visit the db.js and server.js in root folder
+Please referred to the .env file to run locally, also visit the `db.js` and `server.js` in the root folder. Also for the porpuse of the Heroku deployment `package.json` was modified as well.
+
 * Node Express & Mongo DB 
 * In the upper folder run nodemon server
 * Localhost should be running on port 5000
@@ -21,3 +22,10 @@ The application as being built with React, Redux, Redux-Thunk, Node Express, Mon
 * User Dashboard, Admin dashboard, Manage Users, Bicycles, Bookings from the Admin panel
 * Single Page Applications & Responsive Design
 
+## User Actions
+* User should be able to register/login
+* See bikes available, book & pay
+* See bookings
+* As admin user can see admin area, see catalogue, edit/update bike, delete & see catalogue.
+
+# Have fun, cheers!
