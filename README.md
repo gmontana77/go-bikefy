@@ -21,15 +21,18 @@ Please referred to the .env file to run locally, also visit the `db.js` and `ser
 * cd in to the `client` folder and run yarn start
 
 <br />
+
 ### Technologies Used
 The application as being built with `React, Redux, Redux-Thunk, Node Express, Mongo DB & Ant Design`.
 <br />
+
 ### Features
 * Stripe Payment Gateway Integration
 * State Management Redux (actions, reducers, store)
 * User Dashboard, Admin dashboard, Manage Users, Bicycles, Bookings from the Admin panel
 * Single Page Applications & Responsive Design
 <br />
+
 ### User Actions
 * User should be able to register/login
 * See bikes available, book & pay
@@ -38,4 +41,5 @@ The application as being built with `React, Redux, Redux-Thunk, Node Express, Mo
 <br />
 ### UML Diagram 
 <img src="https://i.ibb.co/4mnkS4c/screenshot.png" width="350" title="Click here">
+
 <br />
