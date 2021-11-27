@@ -5,6 +5,12 @@
 ## Getting Started
 ### [Demo here!](https://go-bikefy2.herokuapp.com/login)
 
+Clone the repo
+   ```sh
+   git clone https://github.com/gmontana77/go-bikefy.git
+   ```
+
+
 ### Execution requirements 
 
 Please referred to the .env file to run locally, also visit the `db.js` and `server.js` in the root folder. Also for the porpuse of the Heroku deployment `package.json` was modified as well.
