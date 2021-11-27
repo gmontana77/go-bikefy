@@ -1,10 +1,8 @@
-
+## Getting Started
  - [Demo here!](https://go-bikefy2.herokuapp.com/login)
 
-## Getting Started
-Please referred to the .env file to run locally, also visit the db.js and server.js in root folder
-
 ### Executing program
+Please referred to the .env file to run locally, also visit the db.js and server.js in root folder
 
 * In the upper folder run nodemon server
 * Localhost should be running on port 5000
