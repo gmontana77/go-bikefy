@@ -26,3 +26,4 @@ The application as being built with `React, Redux, Redux-Thunk, Node Express, Mo
 * As admin user can see admin area, see catalogue, edit/update bike, delete & see catalogue.
 
 # Have fun! Cheers!
+<img src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/6/7/1/c/671ca0bdaeaf73d2c11ba633707e37fc-tb2.jpg" width="350" title="hover text">
