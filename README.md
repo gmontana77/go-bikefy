@@ -4,17 +4,14 @@
 ### Executing requirements
 Please referred to the .env file to run locally, also visit the `db.js` and `server.js` in the root folder. Also for the porpuse of the Heroku deployment `package.json` was modified as well.
 
-* Node Express & Mongo DB 
+* `Node Express` & `Mongo DB` 
 * In the upper folder run nodemon server
-* Localhost should be running on port 5000
-```
-http://localhost:5000/api/bikes/getallbikes
-```
+* Localhost should be running on port 5000 `http://localhost:5000/api/bikes/getallbikes`
 * cd in to the client folder and run yarn start
 
 
 ### Technologies Used
-The application as being built with React, Redux, Redux-Thunk, Node Express, Mongo DB & Ant Design.
+The application as being built with `React, Redux, Redux-Thunk, Node Express, Mongo DB & Ant Design`.
 
 ### Features
 * Stripe Payment Gateway Integration
