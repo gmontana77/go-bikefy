@@ -8,7 +8,7 @@ Please referred to the .env file to run locally, also visit the `db.js` and `ser
 * `Node Express` & `Mongo DB` 
 * In the upper folder run nodemon server
 * Localhost should be running on port 5000 `http://localhost:5000/api/bikes/getallbikes`
-* cd in to the client folder and run yarn start
+* cd in to the `client` folder and run yarn start
 
 
 ### Technologies Used
