@@ -25,5 +25,5 @@ The application as being built with `React, Redux, Redux-Thunk, Node Express, Mo
 * See bookings
 * As admin user can see admin area, see catalogue, edit/update bike, delete & see catalogue.
 
-### UML Diagram - 
-<img src="https://i.ibb.co/4mnkS4c/screenshot.png" width="600" title="Click here">
+### UML Diagram 
+<img src="https://i.ibb.co/4mnkS4c/screenshot.png" width="400" title="Click here">
