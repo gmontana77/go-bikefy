@@ -28,4 +28,4 @@ The application as being built with React, Redux, Redux-Thunk, Node Express, Mon
 * See bookings
 * As admin user can see admin area, see catalogue, edit/update bike, delete & see catalogue.
 
-# Have fun, cheers!
+# Have fun! Cheers!
