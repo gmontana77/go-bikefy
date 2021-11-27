@@ -20,7 +20,7 @@ The application as being built with `React, Redux, Redux-Thunk, Node Express, Mo
 * User Dashboard, Admin dashboard, Manage Users, Bicycles, Bookings from the Admin panel
 * Single Page Applications & Responsive Design
 
-## User Actions
+### User Actions
 * User should be able to register/login
 * See bikes available, book & pay
 * See bookings
