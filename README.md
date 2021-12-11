@@ -3,7 +3,7 @@
 <br />
 
 ## Getting Started
-### [Demo here!](https://go-bikefy2.herokuapp.com/login)
+# [Demo here!](https://go-bikefy.herokuapp.com/login)
 
 Clone the repo
    ```sh
